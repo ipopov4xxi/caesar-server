@@ -102,19 +102,11 @@ class ShareMessage
     }
 
     /**
-     * @param \DateTime $expires
-     *
-     * @return $this
+     * @param \DateTimeInterface $expires
      */
-    public function setExpires($expires)
+    public function setExpires(\DateTimeInterface $expires): void
     {
-        if ($expires instanceof \DateTime) {
-            $this->expires = $expires;
-        } elseif (is_string($expires)) {
-            $this->expires = new \DateTime($expires);
-        }
-
-        return $this;
+        $this->expires = $expires;
     }
 
     /**

@@ -60,7 +60,7 @@ spec:
           value: $2y$13$lmqojbDeoO7On3AfHy6UFOGq/dQrlwEyJ7b2sbDhLppbvfRguIJau
         - name: TWO_FACTOR_SERVER_NAME
           value: Caesar
-        image: caesarteam/caesar-server:${CICD_GIT_BRANCH}
+        image: ${CICD_IMAGE}:${CICD_GIT_BRANCH}
         imagePullPolicy: Always
         name: caesarapp-server
         ports:
